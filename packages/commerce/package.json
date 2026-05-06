@@ -103,7 +103,8 @@
   "dependencies": {
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "sonner": "^2.0.7"
+    "sonner": "^2.0.7",
+    "lucide-react": "^0.510.0"
   },
   "peerDependencies": {
     "lucide-react": "^0.510.0",

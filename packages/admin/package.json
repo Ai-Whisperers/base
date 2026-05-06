@@ -40,7 +40,8 @@
     "@ai-whisperers/auth": "file:../auth",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "recharts": "^2.15.0"
+    "recharts": "^2.15.0",
+    "lucide-react": "^0.510.0"
   },
   "peerDependencies": {
     "lucide-react": "^0.510.0",

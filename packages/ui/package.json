@@ -42,7 +42,7 @@
     "clsx": "^2.1.1",
     "recharts": "^3.8.1",
     "tailwind-merge": "^3.5.0",
-    "lucide-react": "^0.460.0"
+    "lucide-react": "^0.510.0"
   },
   "peerDependencies": {
     "lucide-react": "^0.510.0",
