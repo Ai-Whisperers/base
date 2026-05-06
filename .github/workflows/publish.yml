@@ -30,7 +30,7 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@ai-whisperers'
 
-      - run: npm ci
+      - run: npm install --legacy-peer-deps
 
       - run: npm run build
 
