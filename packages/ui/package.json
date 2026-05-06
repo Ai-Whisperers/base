@@ -10,6 +10,10 @@
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
+    },
+    "./cn": {
+      "import": "./dist/cn.js",
+      "types": "./dist/cn.d.ts"
     }
   },
   "files": [

@@ -11,6 +11,30 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
+    "./auth-context": {
+      "import": "./dist/auth-context.js",
+      "types": "./dist/auth-context.d.ts"
+    },
+    "./types": {
+      "import": "./dist/types.js",
+      "types": "./dist/types.d.ts"
+    },
+    "./storage-keys": {
+      "import": "./dist/storage-keys.js",
+      "types": "./dist/storage-keys.d.ts"
+    },
+    "./orders-hooks": {
+      "import": "./dist/orders-hooks.js",
+      "types": "./dist/orders-hooks.d.ts"
+    },
+    "./address-hooks": {
+      "import": "./dist/address-hooks.js",
+      "types": "./dist/address-hooks.d.ts"
+    },
+    "./favorites": {
+      "import": "./dist/favorites.js",
+      "types": "./dist/favorites.d.ts"
+    },
     "./supabase/browser": {
       "import": "./dist/supabase/browser.js",
       "types": "./dist/supabase/browser.d.ts"
@@ -32,7 +56,9 @@
       "types": "./dist/supabase/middleware.d.ts"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
@@ -41,12 +67,12 @@
   "dependencies": {
     "@supabase/ssr": "^0.10.2",
     "@supabase/supabase-js": "^2.105.1"
-},
+  },
   "peerDependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "next": "^15.0.0"
-},
+  },
   "devDependencies": {
     "typescript": "^5.8.0"
   }

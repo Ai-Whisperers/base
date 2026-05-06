@@ -32,14 +32,22 @@ export interface ProductVariant {
 
 export interface Order {
   id: string
-  items: CartItem[]
-  total: number
-  status: 'pending' | 'confirmed' | 'shipped' | 'delivered' | 'cancelled'
-  createdAt: string
-  customerName: string
-  customerPhone: string
+  items: any[]
+  total: number | string
+  status: string
+  created_at?: string
+  createdAt?: string
+  customer_name?: string
+  customerName?: string
+  customer_phone?: string
+  customerPhone?: string
+  customer_email?: string
   customerEmail?: string
+  shipping_address?: string
   shippingAddress?: Address
+  payment_method?: string
+  note?: string
+  [key: string]: any
 }
 
 export interface Address {

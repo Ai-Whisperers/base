@@ -10,6 +10,14 @@
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
+    },
+    "./analytics": {
+      "import": "./dist/analytics.js",
+      "types": "./dist/analytics.d.ts"
+    },
+    "./cookie-consent": {
+      "import": "./dist/cookie-consent.js",
+      "types": "./dist/cookie-consent.d.ts"
     }
   },
   "files": [

@@ -22,6 +22,10 @@
     "./image-upload": {
       "import": "./dist/image-upload.js",
       "types": "./dist/image-upload.d.ts"
+    },
+    "./ui": {
+      "import": "./dist/ui.js",
+      "types": "./dist/ui.d.ts"
     }
   },
   "files": [
