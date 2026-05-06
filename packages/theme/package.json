@@ -1,6 +1,6 @@
 {
   "name": "@ai-whisperers/theme",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "type": "module",
   "main": "./dist/index.js",
@@ -12,7 +12,9 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
@@ -20,7 +22,7 @@
   },
   "dependencies": {
     "tailwindcss": "^4.0.0"
-},
+  },
   "peerDependencies": {},
   "devDependencies": {
     "typescript": "^5.8.0"
