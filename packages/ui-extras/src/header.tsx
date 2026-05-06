@@ -8,7 +8,8 @@ const MobileNav = (_: any) => null
 const SearchOverlay = (_: any) => null
 const DarkModeToggle = (_: any) => null
 const LanguageSwitcher = (_: any) => null
-import { CurrencySwitcher } from "@ai-whisperers/commerce/currency-switcher"
+// CurrencySwitcher provided by consumer
+const CurrencySwitcher = (_: any) => null
 // content injected via locale prop
 const content: any = {}
 const c = content as any
