@@ -1,0 +1,26 @@
+{
+  "name": "@ai-whisperers/catalog",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "^15.0.0"
+  },
+  "peerDependencies": {
+    "@ai-whisperers/commerce": "^0.1.0",
+    "@ai-whisperers/ui": "^0.1.0",
+    "@ai-whisperers/ui-extras": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.0.0"
+  }
+}
