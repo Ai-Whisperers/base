@@ -1,7 +1,10 @@
 "use client"
 import { useState, useEffect } from "react"
+// import content from "@/content/es.json" — consumer provides own content
 
-interface CookieConsentConfig {
+
+
+interface CookieConfig {
   enabled?: boolean
   message?: string
   acceptText?: string
@@ -9,16 +12,17 @@ interface CookieConsentConfig {
   moreInfoText?: string
 }
 
-export function CookieConsent({ config = {} }: { config?: CookieConsentConfig }) {
+export function CookieConsent({ config: cfg }: { config?: CookieConfig }) {
+  const config = cfg || {}
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    const accepted = localStorage.getItem("cookies-accepted")
+    const accepted = localStorage.getItem("viajero-cookies-accepted")
     if (!accepted && config.enabled !== false) setVisible(true)
-  }, [config.enabled])
+  }, [])
 
   const accept = () => {
-    localStorage.setItem("cookies-accepted", "true")
+    localStorage.setItem("viajero-cookies-accepted", "true")
     setVisible(false)
   }
 

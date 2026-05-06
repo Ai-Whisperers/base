@@ -20,6 +20,7 @@ export function LanguageSwitcher() {
   const switchLang = (l: Lang) => {
     setLangState(l)
     localStorage.setItem("viajero_lang", l)
+    // Reload content by re-rendering (simple approach: reload)
     const url = new URL(window.location.href)
     url.searchParams.set("lang", l)
     window.location.href = url.toString()

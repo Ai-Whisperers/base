@@ -1,5 +1,5 @@
 import * as React from "react"
-import { cn } from "./cn"
+import { cn } from "@ai-whisperers/ui/cn"
 
 const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (

@@ -1,44 +1,39 @@
 "use client"
 import { useEffect } from "react"
-import { usePathname, useSearchParams } from "next/navigation"
+import { usePathname } from "next/navigation"
 
-declare global {
-  interface Window {
-    gtag: (command: string, action: string, params?: Record<string, any>) => void
-    dataLayer: any[]
-  }
-}
-
-interface GA4Config {
+interface GAConfig {
   enabled?: boolean
   measurementId?: string
 }
 
-export function AnalyticsProvider({ 
-  children, 
-  ga4 = {} 
-}: { 
-  children: React.ReactNode
-  ga4?: GA4Config 
-}) {
+declare global {
+  interface Window {
+    dataLayer?: any[]
+    gtag?: (...args: any[]) => void
+  }
+}
+
+export function AnalyticsProvider({ children, config }: { children: React.ReactNode; config?: GAConfig }) {
   const pathname = usePathname()
+  const ga = config || { enabled: false, measurementId: "G-XXXXXXXX" }
 
   useEffect(() => {
-    if (!ga4.enabled || !ga4.measurementId || ga4.measurementId === "G-XXXXXXXX") return
+    if (!ga.enabled || !ga.measurementId || ga.measurementId === "G-XXXXXXXX") return
 
     const script = document.createElement("script")
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${ga4.measurementId}`
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${ga.measurementId}`
     script.async = true
     document.head.appendChild(script)
 
     window.dataLayer = window.dataLayer || []
     const gtag = (...args: any[]) => { (window.dataLayer as any[]).push(args) }
     gtag("js", new Date())
-    gtag("config", ga4.measurementId)
+    gtag("config", ga.measurementId)
     gtag("event", "page_view", { page_path: pathname })
 
     window.gtag = gtag
-  }, [pathname, ga4.enabled, ga4.measurementId])
+  }, [pathname, ga.enabled, ga.measurementId])
 
   return <>{children}</>
 }
