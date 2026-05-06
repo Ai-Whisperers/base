@@ -1,17 +1,18 @@
 {
-  "name": "@ai-whisperers/checkout",
+  "name": "@ai-whisperers/ui-extras",
   "version": "0.1.0",
   "private": false,
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "echo skipped",
+    "build": "tsc",
     "dev": "tsc --watch"
   },
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "^15.0.0"
+    "next": "^15.0.0",
+    "framer-motion": "^11.0.0"
   },
   "peerDependencies": {
     "@ai-whisperers/commerce": "^0.1.0",

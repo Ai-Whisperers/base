@@ -2,21 +2,15 @@
 import Link from "next/link"
 import { useState } from "react"
 import { usePathname } from "next/navigation"
-// CartBadge provided by consumer
-const CartBadge = () => <span className="sr-only">Cart</span>
-// AuthMenu provided by consumer
-const AuthMenu = () => <span className="sr-only">Account</span>
-// MobileNav provided by consumer
-const MobileNav = () => <span className="sr-only">Menu</span>
-// SearchOverlay provided by consumer
-const SearchOverlay = () => <span className="sr-only">Search</span>
-// DarkModeToggle provided by consumer
-const DarkModeToggle = () => <span className="sr-only">Dark mode</span>
-// LanguageSwitcher provided by consumer
-const LanguageSwitcher = () => <span className="sr-only">Lang</span>
+const CartBadge = (_: any) => null
+const AuthMenu = (_: any) => null
+const MobileNav = (_: any) => null
+const SearchOverlay = (_: any) => null
+const DarkModeToggle = (_: any) => null
+const LanguageSwitcher = (_: any) => null
 import { CurrencySwitcher } from "@ai-whisperers/commerce/currency-switcher"
 // content injected via locale prop
-
+const content: any = {}
 const c = content as any
 const submenu = c.categoryMenu || {}
 const NAV_ITEMS = [

@@ -1,5 +1,7 @@
 "use client"
-import { motion, AnimatePresence } from "framer-motion"
+// framer-motion not available; using CSS animations
+const motion = { div: (p: any) => <div {...p} /> }
+const AnimatePresence = ({children}: any) => <>{children}</>
 import { usePathname } from "next/navigation"
 export function PageTransition({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()

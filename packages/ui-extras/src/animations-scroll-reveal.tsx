@@ -1,5 +1,6 @@
 "use client"
-import { motion } from "framer-motion"
+// framer-motion not available; using CSS animations
+const motion = { div: (p: any) => <div {...p} />, span: (p: any) => <span {...p} /> }
 import { useRef } from "react"
 
 export function FadeUp({ children, className, delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
