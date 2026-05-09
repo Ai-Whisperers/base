@@ -1,0 +1,34 @@
+{
+  "name": "@ai-whisperers/content",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./loader": {
+      "import": "./dist/loader.js",
+      "types": "./dist/loader.d.ts"
+    },
+    "./page-data": {
+      "import": "./dist/page-data.js",
+      "types": "./dist/page-data.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {},
+  "peerDependencies": {},
+  "devDependencies": {
+    "typescript": "^5.8.0"
+  }
+}

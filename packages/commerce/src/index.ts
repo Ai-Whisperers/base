@@ -1,13 +1,24 @@
-export * from './cart/cart-context'
-export * from './cart/cart-merger'
-export * from './cart/cart-toast-listener'
-export * from './checkout/checkout-stepper'
-export * from './checkout/delivery-calculator'
-export * from './payment/factory'
-export * from './payment/pagopar'
-export * from './payment/bancard'
-export * from './payment/stripe'
-export * from './payment/paypal'
-export * from './product/bulk-price'
-export * from './product/product-reviews'
-export * from './coupon-input'
+// ─── Cart (factory pattern) ─────────────────────────────────────────────────
+export { createCart } from "./cart/cart-context"
+export type { CartConfig } from "./cart/cart-context"
+export { CartMerger } from "./cart/cart-merger"
+export { CartToastListener } from "./cart/cart-toast-listener"
+
+// ─── Checkout ───────────────────────────────────────────────────────────────
+export { CheckoutStepper } from "./checkout/checkout-stepper"
+export { DeliveryCalculator } from "./checkout/delivery-calculator"
+
+// ─── Payment ────────────────────────────────────────────────────────────────
+export { registerGateway, getGateway, getRegisteredGateways } from "./payment/factory"
+export type { PaymentRequest, GatewayResult, GatewayAdapter } from "./payment/factory"
+// Payment gateway files import side-effects to register themselves
+
+// ─── Product ────────────────────────────────────────────────────────────────
+export { BulkPriceDisplay } from "./product/bulk-price"
+export { ProductReviews } from "./product/product-reviews"
+
+// ─── UI ─────────────────────────────────────────────────────────────────────
+export { CouponInput } from "./coupon-input"
+
+// ─── Types ──────────────────────────────────────────────────────────────────
+export type { CartItem } from "./types"

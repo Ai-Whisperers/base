@@ -1,0 +1,16 @@
+# Node — standard .dockerignore for Next.js projects
+node_modules/
+.next/
+dist/
+.git/
+.gitignore
+*.md
+.env*
+!.env.production
+*.log
+coverage/
+test/
+tests/
+.vscode/
+.idea/
+*.tsbuildinfo

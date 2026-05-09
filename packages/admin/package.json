@@ -1,6 +1,6 @@
 {
   "name": "@ai-whisperers/admin",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": false,
   "type": "module",
   "main": "./dist/index.js",
@@ -37,7 +37,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@ai-whisperers/auth": "file:../auth",
+    "@ai-whisperers/auth": "^0.2.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "recharts": "^2.15.0",

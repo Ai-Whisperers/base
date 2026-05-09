@@ -1,0 +1,28 @@
+version: "3.8"
+
+networks:
+  agent-net:
+    external: true
+
+services:
+  web:
+    build:
+      context: .
+      args:
+        - NEXT_PUBLIC_SUPABASE_URL
+        - NEXT_PUBLIC_SUPABASE_ANON_KEY
+    image: my-client:dev
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_SUPABASE_URL
+      - NEXT_PUBLIC_SUPABASE_ANON_KEY
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    networks:
+      - agent-net
+    labels:
+      - "traefik.enable=false"

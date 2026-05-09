@@ -1,0 +1,13 @@
+{
+  "name": "@ai-whisperers/scaffold",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "echo skipped",
+    "new-client": "bash new-client.sh"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.0"
+  }
+}
