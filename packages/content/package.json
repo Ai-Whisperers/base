@@ -18,6 +18,10 @@
     "./page-data": {
       "import": "./dist/page-data.js",
       "types": "./dist/page-data.d.ts"
+    },
+    "./resolvers": {
+      "import": "./dist/resolvers.js",
+      "types": "./dist/resolvers.d.ts"
     }
   },
   "files": ["dist"],
