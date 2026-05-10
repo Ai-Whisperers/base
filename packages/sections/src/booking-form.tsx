@@ -38,7 +38,7 @@ export function BookingFormSection({ data, locale }: any) {
   const t = (key: string) => d[key] || ''
 
   return (
-    <section className="py-24 bg-surface-alt">
+    <section className="py-20 bg-surface-alt">
       <div className="max-w-[700px] mx-auto px-4">
         {d.title && <h2 className="text-2xl font-bold text-primary mb-2 text-center">{d.title}</h2>}
         {d.description && <p className="text-text-muted text-center mb-8">{d.description}</p>}

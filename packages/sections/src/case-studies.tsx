@@ -10,7 +10,7 @@ export function CaseStudySection({ data }: SectionComponentProps) {
   const active = items[selected]
   return (
     <>
-      <section className="py-24 bg-surface-alt">
+      <section className="py-20 bg-surface-alt">
         <div className="max-w-6xl mx-auto text-center px-4">
           <p className="text-xs text-text-muted uppercase tracking-[2px] mb-2">{data.eyebrow}</p>
           {title && <h2 className="text-[clamp(1.5rem,3vw,2.2rem)] font-playfair font-bold text-primary mb-2">{title}</h2>}
@@ -24,7 +24,7 @@ export function CaseStudySection({ data }: SectionComponentProps) {
         </div>
       </section>
 
-      {active && <section className="py-16">
+      {active && <section className="py-20">
         <div className="max-w-5xl mx-auto px-4">
           <div className="flex gap-4 mb-8 justify-center flex-wrap">
             {items.map((item: any, i: number) => (
@@ -67,7 +67,7 @@ export function CaseStudySection({ data }: SectionComponentProps) {
         </div>
       </section>}
 
-      <section className="py-16 text-center">
+      <section className="py-20 text-center">
         <div className="max-w-4xl mx-auto px-4">
           <p className="text-lg text-text-muted mb-6">¿Trabajaste con Nexa? Tu historia puede ayudar a otros.</p>
           <a href="/testimonios/caso-de-exito-form.html" className="inline-block px-8 py-3 bg-accent text-primary rounded-full font-bold text-base no-underline hover:opacity-90">Comparte tu experiencia</a>

@@ -35,7 +35,7 @@ export function FeedbackSection({ data, locale }: SectionComponentProps) {
   }
 
   if (sent) return (
-    <section className="py-16 text-center">
+    <section className="py-20 text-center">
       <div className="max-w-[500px] mx-auto px-4">
         <div className="text-4xl mb-4">✓</div>
         <p className="text-lg font-bold text-primary mb-2">{tr('thanks')}</p>
@@ -44,7 +44,7 @@ export function FeedbackSection({ data, locale }: SectionComponentProps) {
   )
 
   return (
-    <section className="py-16 bg-surface-alt">
+    <section className="py-20 bg-surface-alt">
       <div className="max-w-[600px] mx-auto px-4">
         <p className="text-xs text-text-muted uppercase tracking-[2px] mb-2 text-center">{tr('eyebrow')}</p>
         <h2 className="text-2xl font-bold text-primary mb-8 text-center">{tr('title')}</h2>

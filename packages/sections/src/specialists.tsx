@@ -20,7 +20,7 @@ export function IntakeWizardSection({ pageContent, data }: SectionComponentProps
   if (showResult) {
     const recommended = d.recommendedTier || 'business'
     return (
-      <section className="py-24 bg-surface-alt">
+      <section className="py-20 bg-surface-alt">
         <div className="max-w-[600px] mx-auto text-center px-4">
           <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-primary mb-4">{d.resultTitle || 'Tu recomendación'}</h2>
           <p className="text-lg font-bold text-primary">{recommended}</p>
@@ -32,7 +32,7 @@ export function IntakeWizardSection({ pageContent, data }: SectionComponentProps
     )
   }
   return (
-    <section className="py-24 bg-surface-alt">
+    <section className="py-20 bg-surface-alt">
       <div className="max-w-[600px] mx-auto text-center px-4">
         <div className="flex justify-center gap-2 mb-8">
           {steps.map((_: any, i: number) => (

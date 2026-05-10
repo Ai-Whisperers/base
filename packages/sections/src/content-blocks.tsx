@@ -8,7 +8,7 @@ export function TrustSection({ pageContent, images }: SectionComponentProps) {
   const c = pageContent.trust || {}
   if (!c.items?.length) return null
   return (
-    <section className="py-24">
+    <section className="py-20">
       <div className="max-w-6xl mx-auto text-center px-4">
         <p className="text-xs text-text-muted uppercase tracking-[2px] mb-2">{c.eyebrow}</p>
         <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-playfair font-bold text-primary mb-8">{c.title}</h2>
@@ -38,7 +38,7 @@ export function ServicesSection({ pageContent, data, images }: SectionComponentP
   const groups = d.services?.groups || d.groups || []
   if (!groups.length) return null
   return (
-    <section className="py-24">
+    <section className="py-20">
       <div className="max-w-6xl mx-auto text-center px-4">
         <p className="text-xs text-text-muted uppercase tracking-[2px] mb-2">{d.eyebrow}</p>
         <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-playfair font-bold text-primary mb-8">{d.title}</h2>
@@ -78,7 +78,7 @@ export function ProcessSection({ pageContent, images }: SectionComponentProps) {
   const c = pageContent.process || {}
   if (!c.steps?.length) return null
   return (
-    <section className="py-24 bg-surface-alt">
+    <section className="py-20 bg-surface-alt">
       <div className="max-w-[900px] mx-auto text-center px-4">
         <p className="text-xs text-text-muted uppercase tracking-[2px] mb-2">{c.eyebrow}</p>
         <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-playfair font-bold text-primary mb-2">{c.title}</h2>
@@ -110,7 +110,7 @@ export function ServiceDetailSection({ pageContent, data, images }: SectionCompo
   const groups = d.groups || []
   if (!groups.length) return null
   return (
-    <section className="py-24">
+    <section className="py-20">
       <div className="max-w-[1000px] mx-auto text-center px-4">
         {d.eyebrow && <p className="text-xs text-text-muted uppercase tracking-[2px] mb-2">{d.eyebrow}</p>}
         {d.title && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-primary mb-8">{d.title}</h2>}
@@ -151,7 +151,7 @@ export function PillarsSection({ pageContent, data, images }: SectionComponentPr
   const pillars = d.pillars || d.items || []
   if (!pillars.length) return null
   return (
-    <section className="py-24 bg-primary text-white">
+    <section className="py-20 bg-primary text-white">
       <div className="max-w-6xl mx-auto text-center px-4">
         {d.eyebrow && <p className="text-xs text-accent uppercase tracking-[2px] mb-2">{d.eyebrow}</p>}
         {d.title && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-playfair font-bold mb-3">{d.title}</h2>}
@@ -182,7 +182,7 @@ export function ProgramsSection({ pageContent, images }: SectionComponentProps) 
   const c = pageContent.programs || {}
   if (!c.tiers?.length) return null
   return (
-    <section className="py-24 bg-surface-alt">
+    <section className="py-20 bg-surface-alt">
       <div className="max-w-[1100px] mx-auto text-center px-4">
         <p className="text-xs text-text-muted uppercase tracking-[2px] mb-2">{c.eyebrow}</p>
         <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-playfair font-bold text-primary mb-2">{c.title}</h2>
@@ -222,7 +222,7 @@ export function FeaturesSection({ pageContent }: SectionComponentProps) {
   const c = pageContent.beneluxDesk || {}
   if (!c.items?.length) return null
   return (
-    <section className="py-24">
+    <section className="py-20">
       <div className="max-w-6xl mx-auto text-center px-4">
         <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-primary mb-2">{c.title}</h2>
         <p className="text-text-muted mb-8">{c.subtitle}</p>
@@ -243,7 +243,7 @@ export function RequirementsSection({ pageContent }: SectionComponentProps) {
   const c = pageContent.requirements || {}
   if (!c.title && !c.basicDocuments) return null
   return (
-    <section className="py-16 px-4 bg-surface-alt/50">
+    <section className="py-20 px-4 bg-surface-alt/50">
       <div className="max-w-4xl mx-auto">
         {c.eyebrow && <p className="text-xs uppercase tracking-widest text-text-muted mb-2 text-center">{c.eyebrow}</p>}
         {c.title && <h2 className="text-2xl font-bold mb-2 text-center">{c.title}</h2>}
@@ -334,7 +334,7 @@ export function WhyCountrySection({ pageContent, images }: SectionComponentProps
   const c = pageContent.whyCountry || {}
   if (!c.pillars?.length) return null
   return (
-    <section className="py-24 bg-primary text-white">
+    <section className="py-20 bg-primary text-white">
       <div className="max-w-6xl mx-auto text-center px-4">
         <p className="text-xs text-accent uppercase tracking-[2px] mb-2">{c.eyebrow}</p>
         <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-playfair font-bold mb-3">{c.title}</h2>

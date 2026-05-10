@@ -11,7 +11,7 @@ export function StorySection({ pageContent, data }: SectionComponentProps) {
   if (!d.title && !paragraphs.length) return null
   return (
     <>
-      <section className="py-24">
+      <section className="py-20">
         <div className="max-w-[700px] mx-auto px-4">
           {d.title && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-primary mb-6 text-center">{d.title}</h2>}
           {paragraphs.map((p: string, i: number) => (
@@ -20,7 +20,7 @@ export function StorySection({ pageContent, data }: SectionComponentProps) {
         </div>
       </section>
       {resultsParagraphs.length > 0 && (
-        <section className="py-24 bg-surface-alt">
+        <section className="py-20 bg-surface-alt">
           <div className="max-w-[700px] mx-auto px-4">
             {d.resultsTitle && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-primary mb-6 text-center">{d.resultsTitle}</h2>}
             {resultsParagraphs.map((p: string, i: number) => (
@@ -38,7 +38,7 @@ export function GallerySection({ pageContent, data, images }: SectionComponentPr
   const photos = d.images || d.items || []
   if (!d.title && !photos.length) return null
   return (
-    <section className="py-24 bg-surface-alt">
+    <section className="py-20 bg-surface-alt">
       <div className="max-w-6xl mx-auto text-center px-4">
         {d.title && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-primary mb-4">{d.title}</h2>}
         {d.subtitle && <p className="text-text-muted mb-8">{d.subtitle}</p>}
@@ -62,7 +62,7 @@ export function TestimonialsSection({ pageContent, images }: SectionComponentPro
   const c = pageContent.testimonials || {}
   if (!c.items?.length) return null
   return (
-    <section className="py-24">
+    <section className="py-20">
       <div className="max-w-[900px] mx-auto text-center px-4">
         <p className="text-xs text-text-muted uppercase tracking-[2px] mb-2">{c.eyebrow}</p>
         <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-primary mb-2">{c.title}</h2>

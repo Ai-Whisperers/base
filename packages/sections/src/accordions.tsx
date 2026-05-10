@@ -27,7 +27,7 @@ export function FaqSection({ pageContent, data, locale }: SectionComponentProps)
   const searchable = d.searchable !== false
 
   return (
-    <section className="py-24 bg-surface-alt">
+    <section className="py-20 bg-surface-alt">
       <div className="max-w-[800px] mx-auto px-4">
         {d.eyebrow && <p className="text-xs text-text-muted uppercase tracking-[2px] mb-2 text-center">{d.eyebrow}</p>}
         {d.title && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-primary mb-8 text-center">{d.title}</h2>}
@@ -71,7 +71,7 @@ export function PrivacyAccordion({ pageContent, data }: SectionComponentProps) {
   if (!items.length) return null
   const [open, setOpen] = React.useState<number | null>(null)
   return (
-    <section className="py-24">
+    <section className="py-20">
       <div className="max-w-[800px] mx-auto px-4">
         {d.title && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-primary mb-8">{d.title}</h2>}
         {items.map((item: any, i: number) => {

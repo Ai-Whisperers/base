@@ -9,7 +9,7 @@ export function TeamSection({ pageContent, data, images }: SectionComponentProps
   const members = d.members || d.items || []
   if (!members.length) return null
   return (
-    <section className="py-24 bg-surface-alt">
+    <section className="py-20 bg-surface-alt">
       <div className="max-w-[900px] mx-auto text-center px-4">
         {d.title && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-primary mb-8">{d.title}</h2>}
         <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-8">
@@ -35,7 +35,7 @@ export function GlossarySection({ pageContent, data }: SectionComponentProps) {
   const items = d.items || []
   if (!items.length) return null
   return (
-    <section className="py-24 bg-surface-alt">
+    <section className="py-20 bg-surface-alt">
       <div className="max-w-[800px] mx-auto px-4">
         {d.title && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-primary mb-8 text-center">{d.title}</h2>}
         <div className="flex flex-col gap-3">
@@ -57,7 +57,7 @@ export function ComparisonSection({ pageContent, data }: SectionComponentProps) 
   const columns = d.columns
   if (!items.length && !columns) return null
   return (
-    <section className="py-24">
+    <section className="py-20">
       <div className="max-w-6xl mx-auto text-center px-4">
         {d.title && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-primary mb-6">{d.title}</h2>}
         <div className="overflow-x-auto">
@@ -88,7 +88,7 @@ export function GuidesSection({ pageContent, data }: SectionComponentProps) {
   const items = d.items || []
   if (!d.title && !items.length) return null
   return (
-    <section className="py-24">
+    <section className="py-20">
       <div className="max-w-[800px] mx-auto text-center px-4">
         {d.title && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-primary mb-2">{d.title}</h2>}
         {d.subtitle && <p className="text-text-muted mb-8">{d.subtitle}</p>}
@@ -112,7 +112,7 @@ export function PressReleasesListSection({ pageContent, data }: SectionComponent
   const items = d.items || d.pressReleases || []
   if (!items.length) return null
   return (
-    <section className="py-24">
+    <section className="py-20">
       <div className="max-w-[800px] mx-auto px-4">
         {d.title && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-primary mb-2 text-center">{d.title}</h2>}
         {d.subtitle && <p className="text-text-muted text-center mb-8">{d.subtitle}</p>}
@@ -135,7 +135,7 @@ export function BlogSection({ pageContent, data, images, locale: _locale }: Sect
   const locale = _locale || 'nl'
   if (!posts.length) return null
   return (
-    <section className="py-24">
+    <section className="py-20">
       <div className="max-w-[900px] mx-auto px-4">
         {d.title && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-primary mb-8 text-center">{d.title}</h2>}
         <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6">

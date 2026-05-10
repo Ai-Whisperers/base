@@ -7,7 +7,7 @@ function GenericSection({ data }: { data?: any }) {
   if (!data) return null
   const items = data.items || data.full?.items || data.groups || data.pillars || data.members || data.paragraphs || data.trust?.items
   return (
-    <section className="py-16 px-4 even:bg-surface-alt">
+    <section className="py-20 px-4 even:bg-surface-alt">
       <div className="max-w-4xl mx-auto text-center">
         {data.eyebrow && <p className="text-xs uppercase tracking-widest text-text-muted mb-2">{data.eyebrow}</p>}
         {(data.headline || data.title) && <h2 className="text-2xl font-bold mb-2">{data.headline || data.title}</h2>}
@@ -36,7 +36,7 @@ export function StatsSection({ pageContent }: SectionComponentProps) {
   const stats = pageContent.stats
   if (!stats?.items?.length) return null
   return (
-    <section className="py-12 md:py-16 bg-surface-alt">
+    <section className="py-12 md:py-20 bg-surface-alt">
       <div className="max-w-[900px] mx-auto flex justify-center gap-12 flex-wrap">
         {stats.items.map((s: any, i: number) => (
           <div key={i} className="text-center">

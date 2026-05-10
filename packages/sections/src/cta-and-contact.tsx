@@ -8,7 +8,7 @@ export function CtaBanner({ pageContent }: SectionComponentProps) {
   const c = pageContent.finalCta || pageContent.cta || {}
   if (!c.title) return null
   return (
-    <section className="py-24 text-center text-white"
+    <section className="py-20 text-center text-white"
       style={{ background: 'linear-gradient(135deg, #1B2A4A 0%, #2C3E6B 100%)' }}
     >
       <div className="max-w-[600px] mx-auto px-4">
@@ -24,7 +24,7 @@ export function BookingEmbedSection({ pageContent, data }: SectionComponentProps
   const d = data || pageContent || {}
   if (!d.title) return null
   return (
-    <section className="py-24 bg-surface-alt">
+    <section className="py-20 bg-surface-alt">
       <div className="max-w-[800px] mx-auto text-center px-4">
         <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-primary mb-3">{d.title}</h2>
         {d.subtitle && <p className="text-text-muted mb-8">{d.subtitle}</p>}
@@ -44,7 +44,7 @@ export function ContactDetailsSection({ pageContent, data }: SectionComponentPro
   const d = data || pageContent || {}
   if (!d.whatsapp && !d.email) return null
   return (
-    <section className="py-24">
+    <section className="py-20">
       <div className="max-w-[600px] mx-auto text-center px-4">
         {d.title && <h2 className="text-[clamp(1.3rem,2.5vw,1.8rem)] font-bold text-primary mb-6">{d.title}</h2>}
         <div className="flex flex-col gap-4">
