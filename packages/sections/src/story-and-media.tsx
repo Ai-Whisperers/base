@@ -7,16 +7,29 @@ import { resolveImage } from './resolve-content'
 export function StorySection({ pageContent, data }: SectionComponentProps) {
   const d = data || pageContent || {}
   const paragraphs = d.paragraphs || []
+  const resultsParagraphs = d.resultsParagraphs || []
   if (!d.title && !paragraphs.length) return null
   return (
-    <section className="py-24">
-      <div className="max-w-[700px] mx-auto px-4">
-        {d.title && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-primary mb-6 text-center">{d.title}</h2>}
-        {paragraphs.map((p: string, i: number) => (
-          <p key={i} className="text-text leading-relaxed text-sm mb-4">{p}</p>
-        ))}
-      </div>
-    </section>
+    <>
+      <section className="py-24">
+        <div className="max-w-[700px] mx-auto px-4">
+          {d.title && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-primary mb-6 text-center">{d.title}</h2>}
+          {paragraphs.map((p: string, i: number) => (
+            <p key={i} className="text-text leading-relaxed text-sm mb-4">{p}</p>
+          ))}
+        </div>
+      </section>
+      {resultsParagraphs.length > 0 && (
+        <section className="py-24 bg-surface-alt">
+          <div className="max-w-[700px] mx-auto px-4">
+            {d.resultsTitle && <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-primary mb-6 text-center">{d.resultsTitle}</h2>}
+            {resultsParagraphs.map((p: string, i: number) => (
+              <p key={i} className="text-text leading-relaxed text-sm mb-4">{p}</p>
+            ))}
+          </div>
+        </section>
+      )}
+    </>
   )
 }
 
