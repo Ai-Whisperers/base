@@ -21,12 +21,12 @@ export function HeroSection({ pageContent, images }: SectionComponentProps) {
       }}
     >
       <div className="max-w-4xl mx-auto relative z-10 text-white">
-        <h1 className="text-[clamp(1.8rem,4vw,2.8rem)] font-playfair font-bold leading-tight mb-3">{c.headline}</h1>
+        <h1 className="text-[clamp(1.8rem_4vw_2.8rem)] font-playfair font-bold leading-tight mb-3">{c.headline}</h1>
         <div className="w-[60px] h-[3px] bg-accent mx-auto mb-5" />
         <p className="text-lg opacity-90 leading-relaxed max-w-[600px] mx-auto mb-8">{c.subheadline}</p>
         <div className="flex gap-4 justify-center flex-wrap">
           {c.ctaPrimaryText && <a href={c.ctaPrimaryHref} className="px-8 py-3 bg-accent text-primary rounded-full font-bold text-base shadow-lg hover:opacity-90 transition-opacity no-underline">{c.ctaPrimaryText}</a>}
-          {c.ctaSecondaryText && <a href={c.ctaSecondaryHref} className="px-8 py-3 border-2 border-accent text-white rounded-full font-semibold text-base opacity-90 hover:opacity-100 no-underline">{c.ctaSecondaryText}</a>}
+          {c.ctaSecondaryText && <a href={c.ctaSecondaryHref} className="px-8 py-3 border-2 border-white/70 text-white rounded-full font-semibold text-base hover:opacity-100 opacity-80 no-underline">{c.ctaSecondaryText}</a>}
         </div>
         {c.trustBadges && <div className="flex gap-4 justify-center mt-8 flex-wrap">
           {c.trustBadges.map((b: string, i: number) => (
@@ -44,11 +44,11 @@ export function PageHeroSection({ pageContent, data, images }: SectionComponentP
   if (!headline) return null
   const bgImage = d.backgroundImage ? resolveImage(images, d.backgroundImage) : ''
   return (
-    <section className={`py-24 text-center text-white bg-cover bg-center`}
+    <section className={`py-20 text-center text-white bg-cover bg-center`}
       style={{ background: bgImage ? `linear-gradient(135deg, rgba(27,42,74,0.85), rgba(27,42,74,0.65)), url(${bgImage})` : 'linear-gradient(135deg, #1B2A4A 0%, #2C3E6B 100%)' }}
     >
       <div className="max-w-[700px] mx-auto px-4">
-        <h1 className="text-[clamp(1.8rem,3.5vw,2.5rem)] font-bold leading-tight mb-3">{headline}</h1>
+        <h1 className="text-[clamp(1.8rem_3.5vw_2.5rem)] font-bold leading-tight mb-3">{headline}</h1>
         {(d.subheadline || d.subtitle) && <p className="text-base text-white/85 leading-relaxed">{d.subheadline || d.subtitle}</p>}
       </div>
     </section>
