@@ -16,6 +16,6 @@ jobs:
           node-version: 20
           cache: 'npm'
 
-      - run: npm ci
+      - run: npm install --legacy-peer-deps
       - run: npm run build -- --cache-dir=.turbo
       - run: npm run test
