@@ -2,3 +2,4 @@ export { registerGateway, getGateway, getRegisteredGateways, processPayment } fr
 export type { PaymentRequest, PaymentResult, PaymentGateway, BancardConfig, PagoparConfig } from "./types"
 export { bancardSingleBuy, bancardSingleBuyConfirm } from "./bancard"
 export { pagoparCreateOrder } from "./pagopar"
+export { isValidCardNumber, getCardBrand, maskCardNumber } from "./cards"
