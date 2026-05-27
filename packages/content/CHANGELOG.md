@@ -1,5 +1,11 @@
 # @ai-whisperers/content
 
+## 0.3.0
+
+### Minor Changes
+
+- Add Tailwind v4 theme generator, content-driven Header/Footer props, waUrl/cleanPhone utilities, SiteContent type
+
 ## 0.2.0
 
 ### Minor Changes

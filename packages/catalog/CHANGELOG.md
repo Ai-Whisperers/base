@@ -1,5 +1,12 @@
 # @ai-whisperers/catalog
 
+## 2.0.0
+
+### Patch Changes
+
+- Updated dependencies
+  - @ai-whisperers/ui-extras@0.3.0
+
 ## 1.0.0
 
 ### Minor Changes

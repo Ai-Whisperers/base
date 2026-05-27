@@ -1,6 +1,6 @@
 {
   "name": "@ai-whisperers/catalog",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": false,
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -16,7 +16,7 @@
   "peerDependencies": {
     "@ai-whisperers/commerce": "^0.2.1",
     "@ai-whisperers/ui": "^0.4.1",
-    "@ai-whisperers/ui-extras": "^0.2.0"
+    "@ai-whisperers/ui-extras": "^0.3.0"
   },
   "devDependencies": {
     "@types/react": "^19.0.0",
