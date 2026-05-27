@@ -1,6 +1,6 @@
 {
-  "name": "@ai-whisperers/business-registry",
-  "version": "0.3.0",
+  "name": "@ai-whisperers/site-generator",
+  "version": "0.2.0",
   "private": false,
   "type": "module",
   "main": "./dist/index.js",
