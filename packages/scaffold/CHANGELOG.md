@@ -1,5 +1,11 @@
 # @ai-whisperers/scaffold
 
+## 0.1.2
+
+### Patch Changes
+
+- Fix scaffolder bugs (unbound var, missing tsconfig, content placeholders, lucide peer dep). Wire site-generator to business-registry. Add smoke tests.
+
 ## 0.1.1
 
 ### Patch Changes

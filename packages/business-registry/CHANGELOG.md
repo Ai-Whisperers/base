@@ -1,5 +1,11 @@
 # @ai-whisperers/business-registry
 
+## 0.3.1
+
+### Patch Changes
+
+- Fix scaffolder bugs (unbound var, missing tsconfig, content placeholders, lucide peer dep). Wire site-generator to business-registry. Add smoke tests.
+
 ## 0.3.0
 
 ### Minor Changes

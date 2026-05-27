@@ -1,6 +1,6 @@
 {
   "name": "@ai-whisperers/supabase",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": false,
   "scripts": {
     "build": "echo 'Schema package — no build needed'",
