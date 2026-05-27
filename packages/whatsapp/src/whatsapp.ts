@@ -3,6 +3,16 @@ const EVOLUTION_API_KEY = process.env.WHATSAPP_API_KEY || ''
 const EVOLUTION_INSTANCE = process.env.EVOLUTION_INSTANCE || 'hermes-whatsapp'
 const ADMIN_NUMBER = process.env.ADMIN_WHATSAPP || '595981234567'
 
+export function cleanPhone(phone: string): string {
+  return phone.replace(/[^0-9]/g, '')
+}
+
+export function waUrl(phone: string, message?: string): string {
+  const clean = cleanPhone(phone)
+  if (message) return `https://wa.me/${clean}?text=${encodeURIComponent(message)}`
+  return `https://wa.me/${clean}`
+}
+
 function cleanNumber(number: string): string {
   return number.replace(/[^0-9]/g, '')
 }

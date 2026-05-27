@@ -62,3 +62,29 @@ export interface LoadedContent {
   pageConfig: PageConfig
   images: ImageManifest
 }
+
+export interface SiteContent {
+  site: {
+    name: string
+    tagline?: string
+    description?: string
+    whatsapp?: string
+    email?: string
+    domain?: string
+  }
+  navigation?: {
+    links: { label: string; href: string }[]
+  }
+  footer?: {
+    copyright?: string
+    links?: { label: string; href: string }[]
+  }
+  home?: {
+    hero?: {
+      headline?: string
+      subheadline?: string
+      cta?: { text: string; href: string }
+    }
+  }
+  [key: string]: any
+}

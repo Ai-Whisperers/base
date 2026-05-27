@@ -1,5 +1,5 @@
 // ─── Types ──────────────────────────────────────────────────────────────────
-export type { SiteConfig, PageConfig, PageSection, ImageManifest, LoadedContent } from "./types"
+export type { SiteConfig, PageConfig, PageSection, ImageManifest, LoadedContent, SiteContent } from "./types"
 
 // ─── Loader ─────────────────────────────────────────────────────────────────
 export { loadJSON, loadContent } from "./loader"

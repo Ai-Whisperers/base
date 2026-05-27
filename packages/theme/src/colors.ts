@@ -21,6 +21,8 @@ export const colors = {
   admin: {
     primary: '#10B981',
     primaryForeground: '#FFFFFF',
+    secondary: '#37474F',
+    accent: '#F59E0B',
     background: '#0A0A0B',
     foreground: '#FAFAFA',
     muted: '#27272A',
@@ -37,6 +39,7 @@ export const colors = {
     primary: '#4CAF50',
     primaryForeground: '#0A0A0A',
     secondary: '#607D8B',
+    accent: '#FFA726',
     background: '#0A0A0A',
     foreground: '#EAEAEA',
     muted: '#1A1A2E',

@@ -3,45 +3,6 @@
 import Link from "next/link"
 import React from "react"
 
-// ─── Stat Card ─────────────────────────────────────────
-export function StatCard({
-  label,
-  value,
-  sub,
-  icon,
-  color = "emerald",
-}: {
-  label: string
-  value: string
-  sub?: string
-  icon?: React.ReactNode
-  color?: "emerald" | "blue" | "amber" | "purple" | "red"
-}) {
-  const dot = {
-    emerald: "bg-emerald-500",
-    blue: "bg-blue-500",
-    amber: "bg-amber-500",
-    purple: "bg-purple-500",
-    red: "bg-red-500",
-  }[color]
-
-  return (
-    <div className="rounded-xl border border-zinc-800/60 bg-zinc-900/50 p-4 hover:border-zinc-700/60 transition-all group">
-      <div className="flex items-start justify-between mb-2">
-        <p className="text-xs font-medium text-zinc-500">{label}</p>
-        {icon && <div className="text-zinc-600 group-hover:text-zinc-400 transition-colors">{icon}</div>}
-      </div>
-      <p className="text-2xl font-bold text-white tracking-tight">{value}</p>
-      {sub && (
-        <div className="flex items-center gap-1.5 mt-1">
-          <div className={`w-1.5 h-1.5 rounded-full ${dot}`} />
-          <p className="text-xs text-zinc-500">{sub}</p>
-        </div>
-      )}
-    </div>
-  )
-}
-
 // ─── Empty State ───────────────────────────────────────
 export function EmptyState({
   icon,
@@ -405,28 +366,4 @@ export function OrderCard({
   )
 }
 
-// ─── Data Table ─────────────────────────────────────────
-export function DataTable({
-  headers,
-  children,
-}: {
-  headers: { key: string; label: string; className?: string }[]
-  children: React.ReactNode
-}) {
-  return (
-    <div className="overflow-x-auto rounded-xl border border-zinc-800/60">
-      <table className="w-full text-sm">
-        <thead className="border-b border-zinc-800/60 bg-zinc-900/80 text-left">
-          <tr>
-            {headers.map((h) => (
-              <th key={h.key} className={`px-4 py-3 text-xs font-semibold text-zinc-500 uppercase tracking-wider ${h.className || ""}`}>
-                {h.label}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody className="divide-y divide-zinc-800/60">{children}</tbody>
-      </table>
-    </div>
-  )
-}
+

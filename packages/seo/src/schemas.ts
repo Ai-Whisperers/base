@@ -245,6 +245,28 @@ export function websiteSchema(data: { name: string; url: string; description?: s
   }
 }
 
+// ─── Person ─────────────────────────────────────────────────────────────────
+
+export function personSchema(person: {
+  name: string
+  givenName?: string
+  familyName?: string
+  jobTitle?: string
+  description?: string
+  image?: string
+  url?: string
+  sameAs?: string[]
+  email?: string
+  telephone?: string
+  worksFor?: string
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    ...person,
+  }
+}
+
 /**
  * Render JSON-LD as a React-compatible script tag HTML string
  */
