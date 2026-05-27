@@ -17,9 +17,14 @@
   ],
   "scripts": {
     "build": "tsc",
+    "test": "vitest run",
     "clean": "rm -rf dist"
   },
+  "dependencies": {
+    "@ai-whisperers/business-registry": "*"
+  },
   "devDependencies": {
-    "typescript": "^5.8.0"
+    "typescript": "^5.8.0",
+    "vitest": "^3.0.0"
   }
 }

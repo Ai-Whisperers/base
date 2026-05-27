@@ -14,7 +14,7 @@ if [[ -z "$CLIENT_NAME" ]]; then
   exit 1
 fi
 
-if [[ "$2" == "--ecommerce" ]]; then
+if [[ "${2:-}" == "--ecommerce" ]]; then
   TYPE="ecommerce"
 fi
 
@@ -79,7 +79,7 @@ if [[ "$TYPE" == "ecommerce" ]]; then
     "@ai-whisperers/business-registry": "^0.2.0",
     "@ai-whisperers/api-helpers": "^0.2.0",
     "@ai-whisperers/client-kit": "^0.2.0",
-    "lucide-react": "^0.400.0",
+    "lucide-react": "^0.501.0",
     "clsx": "^2.1.0",
     "tailwind-merge": "^2.5.0"
   },
@@ -117,7 +117,7 @@ else
     "@ai-whisperers/env": "^0.2.0",
     "@ai-whisperers/logger": "^0.2.0",
     "@ai-whisperers/compliance": "^0.2.0",
-    "lucide-react": "^0.400.0",
+    "lucide-react": "^0.501.0",
     "clsx": "^2.1.0",
     "tailwind-merge": "^2.5.0"
   },
@@ -247,15 +247,15 @@ fi
 
 # ─── Content ───────────────────────────────────────────────────────────────
 if [[ "$TYPE" == "ecommerce" ]]; then
-  cat > content/es.json <<'EOF'
+  cat > content/es.json <<EOF
 {
   "site": {
-    "name": "CLIENT_NAME",
+    "name": "$CLIENT_NAME",
     "tagline": "Tagline",
     "description": "Description",
     "whatsapp": "+595 XXX XXX XXX",
-    "email": "info@CLIENT.paragu-ai.com",
-    "domain": "CLIENT.paragu-ai.com"
+    "email": "info@${CLIENT_NAME}.paragu-ai.com",
+    "domain": "${CLIENT_NAME}.paragu-ai.com"
   },
   "navigation": {
     "links": [
@@ -266,7 +266,7 @@ if [[ "$TYPE" == "ecommerce" ]]; then
     ]
   },
   "footer": {
-    "copyright": "© 2026 CLIENT_NAME. Todos los derechos reservados.",
+    "copyright": "© $(date +%Y) $CLIENT_NAME. Todos los derechos reservados.",
     "links": [
       { "label": "Privacidad", "href": "/privacidad" },
       { "label": "Términos", "href": "/terminos" }
@@ -274,7 +274,7 @@ if [[ "$TYPE" == "ecommerce" ]]; then
   },
   "home": {
     "hero": {
-      "headline": "Bienvenido a CLIENT_NAME",
+      "headline": "Bienvenido a $CLIENT_NAME",
       "subheadline": "Tu mejor opción en Paraguay",
       "cta": { "text": "Conócenos", "href": "/nosotros" }
     }
@@ -282,10 +282,10 @@ if [[ "$TYPE" == "ecommerce" ]]; then
 }
 EOF
 
-  cat > content/site.json <<'EOF'
+  cat > content/site.json <<EOF
 {
-  "domain": "CLIENT.paragu-ai.com",
-  "name": "CLIENT_NAME",
+  "domain": "${CLIENT_NAME}.paragu-ai.com",
+  "name": "$CLIENT_NAME",
   "locales": ["es"],
   "currency": "PYG",
   "locale": "es-PY",
@@ -313,6 +313,30 @@ fi
 cat > content/tokens.json <<'EOF'
 { "colors": { "primary": "#2563eb", "accent": "#f59e0b" } }
 EOF
+
+cat > tsconfig.json <<'TSCONF'
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [{ "name": "next" }],
+    "paths": { "@/*": ["./*"] }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
+TSCONF
 
 # ─── Docker ────────────────────────────────────────────────────────────────
 cp "$BASE_DIR/packages/deploy/templates/Dockerfile" "$TARGET/Dockerfile"
@@ -379,7 +403,7 @@ jobs:
       node-version: "20"
 CI
 
-  cat > .github/workflows/deploy.yml <<'DEPLOY'
+  cat > .github/workflows/deploy.yml <<EOF
 name: Deploy
 on:
   push:
@@ -388,9 +412,9 @@ jobs:
   deploy:
     uses: Ai-Whisperers/ci-cd/.github/workflows/deploy-vps.yml@main
     with:
-      site-name: "CLIENT_NAME"
+      site-name: "$CLIENT_NAME"
     secrets: inherit
-DEPLOY
+EOF
 fi
 
 # ─── Summary ───────────────────────────────────────────────────────────────

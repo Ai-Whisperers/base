@@ -3,6 +3,10 @@
   "version": "0.3.0",
   "private": false,
   "scripts": {
-    "build": "echo 'Schema package — no build needed'"
+    "build": "echo 'Schema package — no build needed'",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "^3.0.0"
   }
 }
