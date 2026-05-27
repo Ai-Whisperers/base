@@ -1,6 +1,6 @@
 {
   "name": "@ai-whisperers/sections",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "type": "module",
   "main": "./dist/index.js",
@@ -20,7 +20,9 @@
       "types": "./dist/types.d.ts"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",

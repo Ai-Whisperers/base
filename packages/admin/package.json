@@ -1,6 +1,6 @@
 {
   "name": "@ai-whisperers/admin",
-  "version": "0.2.1",
+  "version": "0.3.1",
   "private": false,
   "type": "module",
   "main": "./dist/index.js",
@@ -26,6 +26,34 @@
     "./ui": {
       "import": "./dist/ui.js",
       "types": "./dist/ui.d.ts"
+    },
+    "./stats-card": {
+      "import": "./dist/stats-card.js",
+      "types": "./dist/stats-card.d.ts"
+    },
+    "./data-table": {
+      "import": "./dist/data-table.js",
+      "types": "./dist/data-table.d.ts"
+    },
+    "./guards": {
+      "import": "./dist/guards.js",
+      "types": "./dist/guards.d.ts"
+    },
+    "./dashboard": {
+      "import": "./dist/pages/dashboard.js",
+      "types": "./dist/pages/dashboard.d.ts"
+    },
+    "./orders": {
+      "import": "./dist/pages/orders.js",
+      "types": "./dist/pages/orders.d.ts"
+    },
+    "./products": {
+      "import": "./dist/pages/products.js",
+      "types": "./dist/pages/products.d.ts"
+    },
+    "./categories": {
+      "import": "./dist/pages/categories.js",
+      "types": "./dist/pages/categories.d.ts"
     }
   },
   "files": [
@@ -37,11 +65,13 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@ai-whisperers/auth": "^0.2.0",
+    "@ai-whisperers/auth": "^0.2.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "lucide-react": "^0.510.0",
     "recharts": "^2.15.0",
-    "lucide-react": "^0.510.0"
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.5.0"
   },
   "peerDependencies": {
     "lucide-react": "^0.510.0",

@@ -1,6 +1,6 @@
 {
-  "name": "@ai-whisperers/i18n",
-  "version": "0.2.1",
+  "name": "@ai-whisperers/loyalty",
+  "version": "0.2.0",
   "private": false,
   "type": "module",
   "main": "./dist/index.js",
@@ -19,13 +19,6 @@
     "build": "tsc",
     "dev": "tsc --watch",
     "clean": "rm -rf dist"
-  },
-  "dependencies": {
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3"
-  },
-  "peerDependencies": {
-    "react": "^19.0.0"
   },
   "devDependencies": {
     "typescript": "^5.8.0"
