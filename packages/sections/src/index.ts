@@ -13,7 +13,7 @@ export {
   TeamSection, GlossarySection, ComparisonSection,
   GuidesSection, PressReleasesListSection, BlogSection,
 } from "./lists-and-grids"
-export { CtaBanner, BookingEmbedSection, ContactDetailsSection, NewsletterSection, WhatsappFloatSection } from "./cta-and-contact"
+export { CtaBanner, BookingEmbedSection, ContactDetailsSection, NewsletterSection } from "./cta-and-contact"
 export { StorySection, GallerySection, TestimonialsSection } from "./story-and-media"
 export { CaseStudySection } from "./case-studies"
 export { IntakeWizardSection } from "./specialists"
