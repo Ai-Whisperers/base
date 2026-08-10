@@ -1,4 +1,4 @@
-# @ai-whisperers/whatsapp
+# @ai-whisperers/messaging
 
 ## 0.3.0
 
