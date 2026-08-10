@@ -1,7 +1,7 @@
 const EVOLUTION_URL = process.env.EVOLUTION_API_URL || 'https://evolution.sunstein.cloud'
-const EVOLUTION_API_KEY = process.env.WHATSAPP_API_KEY || ''
-const EVOLUTION_INSTANCE = process.env.EVOLUTION_INSTANCE || 'hermes-whatsapp'
-const ADMIN_NUMBER = process.env.ADMIN_WHATSAPP || '595981234567'
+const EVOLUTION_API_KEY = process.env.MESSAGING_API_KEY || ''
+const EVOLUTION_INSTANCE = process.env.EVOLUTION_INSTANCE || 'hermes-messaging'
+const ADMIN_NUMBER = process.env.ADMIN_MESSAGING || '595981234567'
 
 export function cleanPhone(phone: string): string {
   return phone.replace(/[^0-9]/g, '')
@@ -17,7 +17,7 @@ function cleanNumber(number: string): string {
   return number.replace(/[^0-9]/g, '')
 }
 
-export async function sendWhatsApp(to: string, message: string): Promise<boolean> {
+export async function sendMessaging(to: string, message: string): Promise<boolean> {
   const number = cleanNumber(to)
   try {
     const res = await fetch(
@@ -37,12 +37,12 @@ export async function sendWhatsApp(to: string, message: string): Promise<boolean
     )
     if (!res.ok) {
       const text = await res.text()
-      console.error('[WhatsApp] Send failed:', text.substring(0, 300))
+      console.error('[Messaging] Send failed:', text.substring(0, 300))
       return false
     }
     return true
   } catch (err) {
-    console.error('[WhatsApp] Error:', err)
+    console.error('[Messaging] Error:', err)
     return false
   }
 }
@@ -69,19 +69,19 @@ export async function sendMedia(to: string, caption: string, mediaUrl: string, m
     )
     if (!res.ok) {
       const text = await res.text()
-      console.error('[WhatsApp] Send media failed:', text.substring(0, 300))
+      console.error('[Messaging] Send media failed:', text.substring(0, 300))
       return false
     }
     return true
   } catch (err) {
-    console.error('[WhatsApp] Media error:', err)
+    console.error('[Messaging] Media error:', err)
     return false
   }
 }
 
 export async function notifyNewOrder(order: any) {
-  const msg = `🆕 *Nuevo pedido* #${order.id?.slice(0, 8)}\nTotal: ${order.total}\nPago: ${order.payment_method || 'whatsapp'}\n\nVer en el panel:\nhttps://el-viajero.paragu-ai.com/admin/pedidos`
-  await sendWhatsApp(ADMIN_NUMBER, msg)
+  const msg = `🆕 *Nuevo pedido* #${order.id?.slice(0, 8)}\nTotal: ${order.total}\nPago: ${order.payment_method || 'messaging'}\n\nVer en el panel:\nhttps://el-viajero.paragu-ai.com/admin/pedidos`
+  await sendMessaging(ADMIN_NUMBER, msg)
 }
 
 export async function notifyStatusChange(orderId: string, customerPhone: string, newStatus: string) {
@@ -93,6 +93,6 @@ export async function notifyStatusChange(orderId: string, customerPhone: string,
   }
   const msg = `👋 *El Viajero*\n\n${statusLabels[newStatus] || '📋 Estado actualizado: ' + newStatus}\nPedido: #${orderId?.slice(0, 8)}\n\nAnte cualquier duda, respondé este mensaje.`
   if (customerPhone && customerPhone.length > 8) {
-    await sendWhatsApp(customerPhone, msg)
+    await sendMessaging(customerPhone, msg)
   }
 }

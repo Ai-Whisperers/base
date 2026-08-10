@@ -11,7 +11,7 @@ Monorepo de Ai-Whisperers con packages npm compartidos. Clientes lo instalan com
 | `@ai-whisperers/auth` | Supabase SSR auth (AuthProvider, middleware, admin guards) |
 | `@ai-whisperers/commerce` | Cart, checkout, payment gateways (Bancard, Pagopar, PayPal, Stripe) |
 | `@ai-whisperers/admin` | Admin layout, sidebar, image upload, data tables |
-| `@ai-whisperers/whatsapp` | Evolution API client, WhatsApp float button |
+| `@ai-whisperers/messaging` | Evolution API client, Messaging float button |
 | `@ai-whisperers/seo` | GA4 AnalyticsProvider, CookieConsent, tracking |
 | `@ai-whisperers/i18n` | Language switcher, translator (ES/EN/GN) |
 
